@@ -1,6 +1,11 @@
 /// <reference types="cypress" />
-describe('page', () => {
-  it('works', () => {
-    cy.visit('https://example.cypress.io')
-  })
+
+it('works', () => {
+  cy.visit('index.html')
+  cy.contains('Save Changes')
+})
+
+it('does not work', () => {
+  cy.visit('index.html')
+  cy.contains(/Save Changes/)
 })
